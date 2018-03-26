@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scoreboard 2.0</title>
-    <link rel="stylesheet" href="/screen.css">
+    <link rel="stylesheet" href="./screen.css">
   </head>
   <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
+    <h1>Scoreboard</h1>
+    <section class="header">
+      <section class="t1Header">
+        <section class="teamHeader">
+          {{team1Name}}
+        </section>
+        <section class="teamScore">
+
+        </section>
+      </section>
+      <section class="t2Header">
+        <section class="teamHeader">
+          {{team2Name}}
+        </section>
+        <section class="teamScore">
+
+        </section>
+      </section>
+    </section>
+    <section>
+      <section class="updateName">
+        <span>Update Team1 Name</span>
+        <input type="text">
+        <button ng-click="">update</button>
+      </section>
+      <section class="updateScore">
+        <span>Update {{team1Name}} Score</span>
+        <button ng-click="">+1</button>
+        <button ng-click="">-1</button>
+      </section>
+    </section>
+    <section>
+      <section class="updateName">
+        <span>Update Team2 Name</span>
+        <input type="text">
+        <button ng-click="">update</button>
+      </section>
+      <section class="updateScore">
+        <span>Update {{team2Name}} Score</span>
+        <button ng-click="">+1</button>
+        <button ng-click="">-1</button>
+      </section>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>

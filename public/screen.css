@@ -6,4 +6,31 @@ body {
   margin: 0;
   min-height: 100%;
   font: 16px / 1 sans-serif;
+  text-align: center;
+}
+
+.header {
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.t1Header,
+.t2Header {
+  display: flex;
+  flex-direction: column;
+}
+
+.teamHeader {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  align-content: center;
+  margin: 1em, 2em;
+  padding: 1em;
+}
+
+* {
+  padding: .5em;
+  margin: .25em;
 }
