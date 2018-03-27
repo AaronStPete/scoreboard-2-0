@@ -6,48 +6,48 @@
     <title>Scoreboard 2.0</title>
     <link rel="stylesheet" href="./screen.css">
   </head>
-  <body>
+  <body ng-app="scoreboardApp" ng-controller="mainController">
     <h1>Scoreboard</h1>
     <section class="header">
       <section class="t1Header">
         <section class="teamHeader">
-          {{team1Name}}
+          {{team1DisplayName}}
         </section>
         <section class="teamScore">
-
+          {{team1Score}}
         </section>
       </section>
       <section class="t2Header">
         <section class="teamHeader">
-          {{team2Name}}
+          {{team2DisplayName}}
         </section>
         <section class="teamScore">
-
+          {{team2Score}}
         </section>
       </section>
     </section>
     <section>
       <section class="updateName">
-        <span>Update Team1 Name</span>
-        <input type="text">
-        <button ng-click="">update</button>
+        <span>Update {{team1DisplayName}}'s Name</span>
+        <input type="text" ng-model="team1NameContainer">
+        <button ng-click="changeTeam1Name()">update</button>
       </section>
       <section class="updateScore">
-        <span>Update {{team1Name}} Score</span>
-        <button ng-click="">+1</button>
-        <button ng-click="">-1</button>
+        <span>Update {{team1DisplayName}}'s Score</span>
+        <button ng-click="add1Team1Score()">+1</button>
+        <button ng-click="sub1Team1Score()">-1</button>
       </section>
     </section>
     <section>
       <section class="updateName">
-        <span>Update Team2 Name</span>
-        <input type="text">
-        <button ng-click="">update</button>
+        <span>Update {{team2DisplayName}}'s Name</span>
+        <input type="text" ng-model="team2NameContainer">
+        <button ng-click="changeTeam2Name()">update</button>
       </section>
       <section class="updateScore">
-        <span>Update {{team2Name}} Score</span>
-        <button ng-click="">+1</button>
-        <button ng-click="">-1</button>
+        <span>Update {{team2DisplayName}}'s Score</span>
+        <button ng-click="add1Team2Score()">+1</button>
+        <button ng-click="sub1Team2Score()">-1</button>
       </section>
     </section>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
